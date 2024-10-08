@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 export default function Header() {
-  const isAuth: boolean = false;
+  const isAuth: boolean = true;
 
   return (
     <header className="flex justify-center w-full border-b">

@@ -66,4 +66,7 @@
   body {
     @apply bg-background text-foreground;
   }
+  h1 {
+    @apply sm:text-5xl text-4xl font-black text-green-500;
+  }
 }
