@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { ModeToggle } from "./mode-toggle";
-import { Button } from "./ui/button";
+import { buttonVariants } from "./ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 export default function Header() {
-  const isAuth: boolean = true;
+  const isAuth: boolean = false;
 
   return (
     <header className="flex justify-center w-full border-b">
@@ -32,8 +32,22 @@ export default function Header() {
               </>
             ) : (
               <li className="flex gap-2 items-center">
-                <Button variant="outline">Sign in</Button>
-                <Button>Sign up</Button>
+                <Link
+                  to="/sign-in"
+                  className={buttonVariants({
+                    variant: "outline",
+                  })}
+                >
+                  Sign in
+                </Link>
+                <Link
+                  to="/sign-up"
+                  className={buttonVariants({
+                    variant: "default",
+                  })}
+                >
+                  Sign up
+                </Link>
               </li>
             )}
             <li className="pl-3 border-l">

@@ -1,4 +1,5 @@
-import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
+import { buttonVariants } from "./ui/button";
 
 export default function Banner() {
   return (
@@ -11,10 +12,23 @@ export default function Banner() {
         discuss your passions and interests.
       </span>
       <div className="flex mt-4 gap-2 items-center">
-        <Button size="lg" variant="outline">
-          Sign in
-        </Button>
-        <Button size="lg">Sign up</Button>
+        <Link
+          to="/sign-up"
+          className={buttonVariants({
+            variant: "outline",
+            size: "lg",
+          })}
+        >
+          Go to chat
+        </Link>
+        <Link
+          to="/sign-up"
+          className={buttonVariants({
+            size: "lg",
+          })}
+        >
+          Get started
+        </Link>
       </div>
       <div className="sm:pb-0 pb-10"></div>
     </section>

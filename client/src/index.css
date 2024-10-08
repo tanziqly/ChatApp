@@ -69,4 +69,7 @@
   h1 {
     @apply sm:text-5xl text-4xl font-black text-green-500;
   }
+  h2 {
+    @apply text-xl font-bold text-center;
+  }
 }
