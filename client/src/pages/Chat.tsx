@@ -3,9 +3,9 @@ import UsersList from "@/components/UsersList";
 
 export default function Chat() {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen overflow-hidden flex flex-col">
       <ChatHeader />
-      <div className="flex-grow">
+      <div className="flex-grow h-full">
         <UsersList />
       </div>
     </div>
