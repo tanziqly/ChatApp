@@ -1,6 +1,15 @@
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 import { UserDropdown } from "./UserDropdown";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function ChatHeader() {
   return (
@@ -16,14 +25,26 @@ export default function ChatHeader() {
         <UserDropdown />
       </div>
       <div className="flex flex-1 justify-center">
-        <Button variant="ghost" className="flex items-center gap-2">
-          <Avatar className="w-6 h-6">
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-          <span className="text-neutral-400">dimonikan</span>
-          <div className="h-2 w-2 rounded-full bg-green-500"></div>
-        </Button>
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Button variant="ghost" className="flex items-center gap-2">
+              <Avatar className="w-6 h-6">
+                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+              <span>dimonikan</span>
+              <div className="h-2 w-2 rounded-full bg-green-500"></div>
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="w-56">
+            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuGroup>
+              <DropdownMenuItem>Delete chat</DropdownMenuItem>
+              <DropdownMenuItem>Block user</DropdownMenuItem>
+            </DropdownMenuGroup>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </div>
   );
