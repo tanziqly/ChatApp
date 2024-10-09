@@ -5,7 +5,7 @@ import User from "./User";
 
 export default function UsersList() {
   return (
-    <div className="max-w-[350px] border-r w-full">
+    <div className="max-w-[400px] border-r w-full">
       <div className="p-2 border-b flex w-full max-w-sm items-center space-x-2">
         <Input type="text" placeholder="Search users" />
         <Button size="icon" className="px-2" type="submit">

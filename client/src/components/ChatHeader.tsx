@@ -1,3 +1,4 @@
+import { ModeToggle } from "./mode-toggle";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 import { UserDropdown } from "./UserDropdown";
@@ -14,7 +15,7 @@ import {
 export default function ChatHeader() {
   return (
     <div className="flex py-2 border-b">
-      <div className="flex justify-between border-r items-center px-2 max-w-[350px] w-full">
+      <div className="flex justify-between border-r items-center px-2 max-w-[400px] w-full">
         <div className="flex items-center gap-4">
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" />
@@ -22,7 +23,10 @@ export default function ChatHeader() {
           </Avatar>
           <span className="font-bold">bogdan4ik</span>
         </div>
-        <UserDropdown />
+        <div className="flex gap-2">
+          <ModeToggle />
+          <UserDropdown />
+        </div>
       </div>
       <div className="flex flex-1 justify-center">
         <DropdownMenu>
