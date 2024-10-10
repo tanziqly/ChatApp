@@ -20,7 +20,9 @@ export default function SignInForm() {
         <Checkbox id="terms" />
         <Label htmlFor="terms">Remember me</Label>
       </div>
-      <Button>Sign up</Button>
+      <Link to="/chat">
+        <Button className="w-full">Sign in</Button>
+      </Link>
       <span className="flex items-center gap-2 justify-center mt-2">
         Don't have an account yet?
         <Link to="/sign-up" className="underline text-green-500">
