@@ -6,7 +6,7 @@ export default function MessageArea() {
     <div className="flex px-32 flex-col h-full flex-1 w-full">
       <div
         className="flex-col h-full pt-4 flex items-end overflow-y-auto"
-        style={{ maxHeight: "calc(100vh - 200px)" }}
+        style={{ maxHeight: "calc(100vh - 140px)" }}
       >
         <div className="w-full gap-4 flex-col flex">
           <Message myMessage />

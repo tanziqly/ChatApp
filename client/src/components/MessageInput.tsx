@@ -6,7 +6,7 @@ import { Input } from "./ui/input";
 
 export default function MessageInput() {
   return (
-    <div className="flex gap-2 mt-8 mb-8 items-center">
+    <div className="flex gap-2 mt-4 w-full items-center">
       <Button className="h-12" variant="outline">
         <ImagePlus />
       </Button>
