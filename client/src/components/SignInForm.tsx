@@ -6,7 +6,7 @@ import { Label } from "./ui/label";
 
 export default function SignInForm() {
   return (
-    <div className="flex flex-col gap-2 max-w-[350px] w-full">
+    <div className="flex flex-col gap-4 max-w-[350px] w-full">
       <h2 className="mb-2">Sign Up</h2>
       <div className="grid w-full max-w-sm items-center gap-1.5">
         <Label htmlFor="email">Email</Label>

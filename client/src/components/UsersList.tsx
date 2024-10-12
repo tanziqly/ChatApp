@@ -12,7 +12,7 @@ export default function UsersList() {
           <UserSearch />
         </Button>
       </div>
-      <div className="overflow-y-auto max-h-[calc(100vh-100px)]">
+      <div className="overflow-y-auto max-h-[calc(100vh-110px)]">
         {[...Array(14)].map((_, index) => (
           <User key={index} />
         ))}
