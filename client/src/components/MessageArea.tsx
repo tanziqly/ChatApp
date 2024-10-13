@@ -1,19 +1,46 @@
-import Message from "./Message";
-import MessageInput from "./MessageInput";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
-export default function MessageArea() {
+interface Props {
+  myMessage: boolean;
+  children: string;
+}
+
+export default function Message({ myMessage, children }: Props) {
   return (
-    <div className="md:flex hidden px-12 xl:px-16 2xl:px-32 flex-col h-full flex-1 w-full">
+    <div
+      className={`${
+        myMessage ? "justify-end" : "justify-start"
+      } px-4 w-full flex`}
+    >
       <div
-        className="flex-col h-full pt-4 flex items-end overflow-y-auto"
-        style={{ maxHeight: "calc(100vh - 140px)" }}
+        className={`${
+          myMessage ? "flex-row-reverse" : "flex-row"
+        } flex items-start gap-2 w-full max-w-[450px]`}
       >
-        <div className="w-full gap-4 flex-col flex">
-          <Message myMessage />
-          <Message />
+        <Avatar>
+          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+        <div className="flex flex-col gap-1">
+          <div
+            className={`text-sm flex items-center px-4 py-2 rounded-2xl ${
+              myMessage
+                ? "bg-blue-600 text-white"
+                : "dark:bg-neutral-800 dark:text-white text-neutral-800 bg-neutral-200"
+            }`}
+            style={{ wordBreak: "break-all", overflowWrap: "break-word" }} // Добавлено новое свойство стиля
+          >
+            {children}
+          </div>
+          <span
+            className={`${
+              myMessage ? "text-start" : "text-end"
+            } -right-11 text-xs px-4 text-neutral-400`}
+          >
+            Today, 17:24
+          </span>
         </div>
       </div>
-      <MessageInput />
     </div>
   );
 }
