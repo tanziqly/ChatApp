@@ -6,14 +6,14 @@ export default function User() {
   return (
     <Button
       variant="ghost"
-      className="h-auto p-3 border-b rounded-none max-width-[400px] w-full overflow-hidden"
+      className="h-auto p-3 border-b rounded-none w-full overflow-hidden"
     >
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center w-full space-x-2">
         <Avatar>
           <AvatarImage src="https://github.com/shadcn.png" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
-        <div className="max-w-[330px]">
+        <div className="lg:max-w-[330px] pr-10 min-[450px]:pr-0 md:max-w-[280px] w-full">
           <div className="flex items-center justify-between">
             <div className="flex gap-2 items-center">
               <h3 className="text-start text-base">dimonikan</h3>
@@ -21,7 +21,7 @@ export default function User() {
             </div>
             <span className="text-sm pr-2 text-neutral-500">17:29</span>
           </div>
-          <p className="truncate whitespace-nowrap text-neutral-500">
+          <p className="truncate text-start text-neutral-500">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
           </p>
         </div>

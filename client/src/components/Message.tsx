@@ -18,8 +18,10 @@ export default function Message({ myMessage }: { myMessage: boolean }) {
         </Avatar>
         <div className="flex flex-col gap-1">
           <div
-            className={`text-sm flex items-center text-white px-4 py-2 rounded-2xl ${
-              myMessage ? "bg-blue-600" : "bg-neutral-800"
+            className={`text-sm flex items-center px-4 py-2 rounded-2xl ${
+              myMessage
+                ? "bg-blue-600 text-white"
+                : "dark:bg-neutral-800 dark:text-white text-neutral-800 bg-neutral-200"
             }`}
             style={{ wordBreak: "break-all", overflowWrap: "break-word" }} // Добавлено новое свойство стиля
           >
@@ -46,7 +48,7 @@ export default function Message({ myMessage }: { myMessage: boolean }) {
               myMessage ? "text-start" : "text-end"
             } -right-11 text-sm text-neutral-400`}
           >
-            17:24
+            Today, 17:24
           </span>
         </div>
       </div>
