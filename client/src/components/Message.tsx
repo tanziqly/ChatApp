@@ -28,7 +28,6 @@ export default function Message({ myMessage, children }: Props) {
                 ? "bg-blue-600 text-white"
                 : "dark:bg-neutral-800 dark:text-white text-neutral-800 bg-neutral-200"
             }`}
-            style={{ wordBreak: "break-all", overflowWrap: "break-word" }} // Добавлено новое свойство стиля
           >
             {children}
           </div>
