@@ -11,6 +11,7 @@ import {
 import { UserProfile } from "./UserProfile";
 
 import { Bolt } from "lucide-react";
+import { Alert } from "./Alert";
 
 export function UserDropdown() {
   return (
@@ -25,7 +26,7 @@ export function UserDropdown() {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <UserProfile />
-          <DropdownMenuItem>Settings</DropdownMenuItem>
+          <Alert />
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
