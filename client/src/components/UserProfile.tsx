@@ -15,31 +15,55 @@ export function UserProfile() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="w-full text-start">Profile</button>
+        <button className="p-2 text-sm w-full text-start">Profile</button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
+          <DialogTitle>Profile</DialogTitle>
           <DialogDescription>
             Make changes to your profile here. Click save when you're done.
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
+          <div className="grid grid-cols-1 gap-4">
+            <Label htmlFor="username" className="text-left">
+              Email
             </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
+            <Input
+              disabled
+              id="email"
+              value="bogdan4iks@example.com"
+              className="col-span-3"
+            />
           </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
+          <div className="grid grid-cols-1 gap-4">
+            <Label htmlFor="username" className="text-left">
               Username
             </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
+            <Input
+              disabled
+              id="username"
+              value="bogdan4iks"
+              className="col-span-3"
+            />
+          </div>
+          <div className="grid grid-cols-1 items-center gap-4">
+            <Label htmlFor="name" className="text-left">
+              Password
+            </Label>
+            <Input
+              disabled
+              id="password"
+              value="qwerty123"
+              className="col-span-3"
+            />
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit">Save changes</Button>
+          <Button variant="outline">Edit</Button>
+          <Button disabled type="submit">
+            Save changes
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

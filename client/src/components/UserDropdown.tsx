@@ -24,9 +24,7 @@ export function UserDropdown() {
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
-            <UserProfile />
-          </DropdownMenuItem>
+          <UserProfile />
           <DropdownMenuItem>Settings</DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>
