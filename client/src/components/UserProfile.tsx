@@ -10,8 +10,15 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useState } from "react";
 
 export function UserProfile() {
+  const [edit, setEdit] = useState(false);
+
+  const handleClickEdit = () => {
+    setEdit(!edit);
+  };
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -30,7 +37,7 @@ export function UserProfile() {
               Email
             </Label>
             <Input
-              disabled
+              disabled={!edit}
               id="email"
               value="bogdan4iks@example.com"
               className="col-span-3"
@@ -41,7 +48,7 @@ export function UserProfile() {
               Username
             </Label>
             <Input
-              disabled
+              disabled={!edit}
               id="username"
               value="bogdan4iks"
               className="col-span-3"
@@ -52,7 +59,7 @@ export function UserProfile() {
               Password
             </Label>
             <Input
-              disabled
+              disabled={!edit}
               id="password"
               value="qwerty123"
               className="col-span-3"
@@ -60,8 +67,10 @@ export function UserProfile() {
           </div>
         </div>
         <DialogFooter>
-          <Button variant="outline">Edit</Button>
-          <Button disabled type="submit">
+          <Button onClick={handleClickEdit} variant="outline">
+            Edit
+          </Button>
+          <Button disabled={!edit} type="submit">
             Save changes
           </Button>
         </DialogFooter>
