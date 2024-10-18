@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
@@ -27,9 +26,6 @@ export function UserProfile() {
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Profile</DialogTitle>
-          <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
-          </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-1 gap-4">
@@ -67,7 +63,11 @@ export function UserProfile() {
           </div>
         </div>
         <DialogFooter>
-          <Button onClick={handleClickEdit} variant="outline">
+          <Button
+            className="mt-2 sm:mt-0"
+            onClick={handleClickEdit}
+            variant="outline"
+          >
             Edit
           </Button>
           <Button disabled={!edit} type="submit">

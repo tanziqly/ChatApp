@@ -1,10 +1,10 @@
-import React from "react";
 import { Button } from "./ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
-export default function User() {
+export default function User({ openChat }) {
   return (
     <Button
+      onClick={openChat}
       variant="ghost"
       className="h-auto p-3 border-b rounded-none w-full overflow-hidden"
     >
